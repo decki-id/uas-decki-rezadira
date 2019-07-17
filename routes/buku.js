@@ -1,22 +1,21 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 
 const router = express.Router();
 
 const bukuController = require('../controllers/buku');
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+router.get('/', bukuController.getAllBuku);
 
-router.get('/', bukuController.getIndexBuku);
+router.get('/', bukuController.getBuku);
 
-router.get('/:id', bukuController.getDetailBuku);
+router.post('/', bukuController.postBuku);
 
-router.post('/', urlencodedParser, bukuController.storeBuku);
+// router.put('/', bukuController.putBuku);
 
-router.post('/:id', urlencodedParser, bukuController.updateBuku);
+router.delete('/', bukuController.deleteBuku);
 
-router.post('/:id/destroy', urlencodedParser, bukuController.destroyBuku);
+// router.post('/search/:judul', bukuController.searchBook);
 
-router.post('/search/:judul', urlencodedParser, bukuController.searchBook);
+// var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 module.exports = router;
