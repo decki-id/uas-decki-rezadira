@@ -11,7 +11,7 @@
     "node",
     "express"
   ],
-  "author": "Decki & Rezadira",
+  "author": "decki93, Rezadira",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
