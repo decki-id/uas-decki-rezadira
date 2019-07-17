@@ -5,14 +5,14 @@ const app = express();
 app.set('view engine', 'ejs');
 
 const homeRouter = require('./routes/home');
-const productRouter = require('./routes/product');
+const bukuRouter = require('./routes/buku');
 
 const sequelize = require('./configs/sequelize');
 
-const Product = require('./models/product');
+const Buku = require('./models/buku');
 
 app.use(homeRouter);
-app.use('/product', productRouter);
+app.use('/buku', bukuRouter);
 
 app.listen(3000, () => {
     console.log('server started');

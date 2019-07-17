@@ -1,5 +1,5 @@
 {
-  "name": "my-application",
+  "name": "uas-decki",
   "version": "1.0.0",
   "description": "Node Express Application Template for Teaching Purpose",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "node",
     "express"
   ],
-  "author": "Charel",
+  "author": "Decki & Rezadira",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
