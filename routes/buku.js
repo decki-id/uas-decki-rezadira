@@ -4,6 +4,12 @@ const router = express.Router();
 
 const bukuController = require('../controllers/buku');
 
+router.get('/', bukuController.getAllBuku);
 
+router.get('/', bukuController.getBuku);
+
+router.post('/', bukuController.postBuku);
+
+router.delete('/', bukuController.deleteBuku);
 
 module.exports = router;
