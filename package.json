@@ -1,5 +1,5 @@
 {
-  "name": "uas-decki",
+  "name": "uas_decki-rezadira",
   "version": "1.0.0",
   "description": "Node Express Application Template for Teaching Purpose",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "node",
     "express"
   ],
-  "author": "decki93, Rezadira",
+  "author": "deckiherdiawans, rezadira",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
