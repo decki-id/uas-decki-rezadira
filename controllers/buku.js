@@ -46,3 +46,57 @@ module.exports.deleteBuku = (req, res) => {
         console.log(error)
     })
 }
+
+module.exports.putBuku = (req, res) => {
+    Buku.findOne({
+        where: {
+            name: req.body.name
+        }
+    }).then((buku) => {
+        if(!buku){
+            return res.status(404).json({
+                msg: 'Buku tidak ditemukan!'
+            })
+        }
+        buku.name = req.body.name;
+        buku.price = req.body.price;
+        buku.save();
+        
+        return res.status(200).json({
+            msg: 'Buku telah diperbarui.',
+            buku: buku
+        })
+    }).catch((error) => {
+        console.log(error)
+    })
+}
+
+module.exports.searchBuku = (req, res) => {
+    Buku.findAll({
+        limit: 10,
+        where: {
+            name: sequelize.where(sequelize.fn('LOWER', sequelize.col('name')), 'LIKE', '%' + req.params.name + '%')
+        }
+    }).then((buku) => {
+        res.status(200).json({
+            msg: 'Hasil pencarian.',
+            result: buku
+        })
+    }).catch((error) => {
+        console.log(error)
+    })
+}
+
+module.exports.storeBuku = (req, res) => {
+    Buku.create({
+        name: req.body.name,
+        price: req.body.price,
+    }).then((buku) => {
+        res.status(200).json({
+            msg: 'Buku telah disimpan.',
+            buku: buku
+        })
+    }).catch((error) => {
+        console.log(error)
+    })
+}
