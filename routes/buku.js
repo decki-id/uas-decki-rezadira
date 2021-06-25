@@ -12,4 +12,8 @@ router.post('/', bukuController.postBuku);
 
 router.delete('/', bukuController.deleteBuku);
 
+router.put('/', bukuController.putBuku);
+
+router.post('/search/:name', bukuController.searchBuku);
+
 module.exports = router;
