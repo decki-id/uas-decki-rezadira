@@ -19,7 +19,7 @@
     "express": "^4.18.2",
     "mysql2": "^1.6.5",
     "nodemon": "^2.0.20",
-    "sequelize": "^5.15.1",
+    "sequelize": "^6.28.2",
     "validator": "^13.7.0"
   }
 }
