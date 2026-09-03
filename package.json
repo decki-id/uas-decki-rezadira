@@ -17,7 +17,7 @@
     "body-parser": "^1.20.6",
     "ejs": "^6.0.1",
     "express": "^4.22.2",
-    "mysql2": "^3.22.0",
+    "mysql2": "^3.23.1",
     "nodemon": "^3.1.14",
     "sequelize": "^6.37.8",
     "validator": "^13.15.23"
